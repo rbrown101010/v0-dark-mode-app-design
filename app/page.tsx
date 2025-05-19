@@ -135,8 +135,8 @@ export default function Home() {
       {/* Header with Logo and Turn Flow Button */}
       <header className="w-full flex justify-between items-center mb-8 mt-2">
         <div className="flex items-center">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-400 to-orange-500 mr-2"></div>
-          <span className="font-bold text-xl">VibeAPI</span>
+          <div className="w-[60px] h-[60px] rounded-xl bg-gradient-to-br from-orange-400 to-orange-500 mr-2"></div>
+          <span className="font-bold text-[2.5rem]">vibecode</span>
         </div>
 
         {workflowSteps.length > 0 && (
