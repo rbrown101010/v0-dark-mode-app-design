@@ -47,6 +47,7 @@ export default function Home() {
   const [modalOpen, setModalOpen] = useState(false)
   const [qrModalOpen, setQrModalOpen] = useState(false)
   const [editingStep, setEditingStep] = useState<WorkflowStep | null>(null)
+  const [settingsOpen, setSettingsOpen] = useState(false)
 
   const handleToggle = (type: string) => {
     setSelectedType(type === selectedType ? null : type)
@@ -140,13 +141,22 @@ export default function Home() {
         </div>
 
         {workflowSteps.length > 0 && (
-          <Button
-            className="bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white border-none"
-            onClick={() => setQrModalOpen(true)}
-          >
-            <QrCode className="h-4 w-4 mr-2" />
-            Turn flow into app
-          </Button>
+          <div className="flex gap-2">
+            <Button
+              className="bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white border-none"
+              onClick={() => setQrModalOpen(true)}
+            >
+              <QrCode className="h-4 w-4 mr-2" />
+              Turn flow into app
+            </Button>
+            <Button
+              className="bg-gray-100 text-black border-none hover:bg-gray-200"
+              onClick={() => setSettingsOpen(true)}
+            >
+              <Settings className="h-4 w-4 mr-2" />
+              Settings
+            </Button>
+          </div>
         )}
       </header>
 
@@ -345,6 +355,33 @@ export default function Home() {
               </Button>
             </div>
           )}
+        </DialogContent>
+      </Dialog>
+
+      {/* Settings Modal */}
+      <Dialog open={settingsOpen} onOpenChange={setSettingsOpen}>
+        <DialogContent className="bg-white border-gray-200 text-black">
+          <DialogHeader>
+            <DialogTitle className="text-center">App Settings</DialogTitle>
+            <DialogDescription className="text-center text-gray-500">
+              Customize your experience
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="space-y-2 py-2">
+            <Button className="w-full bg-gray-100 text-black hover:bg-gray-200">
+              Enable Dark Mode
+            </Button>
+            <Button className="w-full bg-gray-100 text-black hover:bg-gray-200">
+              Notification Preferences
+            </Button>
+            <Button className="w-full bg-gray-100 text-black hover:bg-gray-200">
+              Account Settings
+            </Button>
+            <Button className="w-full bg-gray-100 text-black hover:bg-gray-200">
+              Privacy Options
+            </Button>
+          </div>
         </DialogContent>
       </Dialog>
 
