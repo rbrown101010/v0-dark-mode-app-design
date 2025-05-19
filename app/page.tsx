@@ -136,7 +136,10 @@ export default function Home() {
       <header className="w-full flex justify-between items-center mb-8 mt-2">
         <div className="flex items-center">
           <div className="w-[60px] h-[60px] rounded-xl bg-gradient-to-br from-orange-400 to-orange-500 mr-2"></div>
-          <span className="font-bold text-[2.5rem]">vibecode</span>
+          <div className="flex flex-col">
+            <span className="font-bold text-[2.5rem]">vibecode</span>
+            <span className="text-sm text-gray-500">A minimal workflow automator with step-based automation</span>
+          </div>
         </div>
 
         {workflowSteps.length > 0 && (
