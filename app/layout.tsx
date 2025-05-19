@@ -11,7 +11,7 @@ const nunito = Nunito({
 })
 
 export const metadata: Metadata = {
-  title: "vibecode - Workflow Automator",
+  title: "vibeAPI - Workflow Automator",
   description: "A minimal workflow automator with step-based automation",
     generator: 'v0.dev'
 }
