@@ -163,7 +163,7 @@ export default function Home() {
       <div className="w-full max-w-3xl mx-auto">
         {/* User Input Section */}
         <div className="mb-6">
-          <p className="mb-4 text-lg font-semibold">User input</p>
+          <p className="mb-4 text-lg font-semibold">What the user enters</p>
 
           <div className="flex justify-start gap-3 mb-4 w-full">
             <Button
@@ -215,7 +215,7 @@ export default function Home() {
 
         {/* Workflow Steps Section */}
         <div className="mb-6">
-          <h2 className="text-lg font-semibold mb-3">Workflow Steps</h2>
+          <h2 className="text-lg font-semibold mb-3">Automation Workflow</h2>
 
           <div className="space-y-2">
             {workflowSteps.length > 0 ? (
